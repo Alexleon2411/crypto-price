@@ -1,0 +1,125 @@
+:root{
+  --white: #fff;
+  --primary: #61ECBC;
+  --black: #182339;
+}
+
+html {
+  /* esto es para que nos permita trabajar con los rems al mismo nivel que los pixeles */
+  font-size: 62.5%;
+}
+
+/*
+  cuando usamos el background-position: ceter;
+  la imagen tiende a mostrarse a la mitad de la pagina,
+  para eso debemos usar min0height: 100vh;
+  para que tome todo el alto de la pagina y se muestre la imagen completamente
+*/
+
+body{
+  background-image: url('/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 3.8rem;
+  margin-top: 5rem;
+  color: var(--white)
+}
+
+.app-title span {
+  display: block;
+  line-height: 0.8;
+  color: var(--primary);
+  font-size: 4.4rem;
+}
+
+.content {
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+.form,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  color: var(--black)
+}
+
+.form select {
+  background-color: #ecebeb;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.9rem;
+}
+.crypto-select {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.form [type='submit'] {
+  background-color: var(--primary);
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+
+
+.form [type='submit']:hover {
+  background-color: darkcyan;
+  color: white;
+}
+
+.result-wrapper {
+  margin-top: 5rem;
+}
+
+.result-wrapper h2 {
+  text-align: center;
+}
+/*  se le  da la configuracion de display de grid para tenerlo en columnas, la imagen de lado izquierdo pequena y el resultado del lado derecho  */
+.result {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result img {
+  width: 100%;
+}
+
+.result p {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+.result span {
+  font-weight: 700;
+}
